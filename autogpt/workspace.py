@@ -24,7 +24,7 @@ def path_in_workspace(relative_path: str | Path) -> Path:
     Returns:
         Path: Absolute path for the given path in the workspace
     """
-    return safe_path_join(WORKSPACE_PATH, relative_path)
+    return WORKSPACE_PATH.joinpath(relative_path)
 
 
 def safe_path_join(base: Path, *paths: str | Path) -> Path:
